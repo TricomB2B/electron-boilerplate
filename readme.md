@@ -1,9 +1,11 @@
-# electron-boilerplate [![forthebadge](http://forthebadge.com/images/badges/built-with-resentment.svg)](http://forthebadge.com)
+# electron-boilerplate
+
+<a href="http://forthebadge.com"><img src="http://forthebadge.com/images/badges/built-with-resentment.svg" height="35px" /></a>
+<a href="http://forthebadge.com"><img src="http://forthebadge.com/images/badges/no-ragrets.svg" height="35px" /></a>
 
 > Boilerplate to kickstart creating an app with [Electron](https://github.com/atom/electron)
 
 Forked from [electron-boilerplate](https://github.com/sindresorhus/electron-boilerplate) and updated to add some TricomB2B flavored UX and a slight improvement to the ease of dropping in an AngularJS app.
-
 
 ## Getting started
 
