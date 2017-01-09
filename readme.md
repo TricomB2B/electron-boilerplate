@@ -1,29 +1,66 @@
-# electron-boilerplate [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+# electron-boilerplate [![forthebadge](http://forthebadge.com/images/badges/built-with-resentment.svg)](http://forthebadge.com)
 
 > Boilerplate to kickstart creating an app with [Electron](https://github.com/atom/electron)
 
-*See [awesome-electron](https://github.com/sindresorhus/awesome-electron) for more useful Electron resources.*
-
----
-
-<p align="center"><b>⚛ Learn React in just a couple of afternoons with this awesome <a href="https://ReactForBeginners.com/friend/AWESOME">React course</a> by Wes Bos</b></p>
-
----
+Forked from [electron-boilerplate](https://github.com/sindresorhus/electron-boilerplate) and updated to add some TricomB2B flavored UX and a slight improvement to the ease of dropping in an AngularJS app.
 
 
 ## Getting started
 
-In your directory, run:
+Install the boilerplate and dependencies:
 
+```sh
+$ git clone git@github.com:TricomB2B/electron-boilerplate.git project-name
+$ cd project-name && rm -rf .git
+$ cd boilerplate && yarn
 ```
-$ curl -fsSL https://github.com/sindresorhus/electron-boilerplate/archive/master.tar.gz | tar -xz --strip-components 2
+
+That will get you a working app.
+
+## Scripts
+
+```sh
+$ npm start
 ```
 
-You can also `git clone` or [download](https://github.com/sindresorhus/electron-boilerplate/archive/master.zip) this repo and get contents of the `boilerplate` folder.
+Will launch the application for development and debugging.
 
-There's also a [Yeoman generator](https://github.com/sindresorhus/generator-electron).
+```sh
+$ npm run build
+```
 
+Will build all the distributable packages, packaging it up for MacOS, Linux, and Windows, using [electron-packager](https://github.com/electron-userland/electron-packager).
+
+## App Installation
+
+Just drop in the built AngularJS app into `./boilerplate/app`. Two key changes from an AngularJS web app environment to the Electron environment are required:
+
+* Remove the `<base href="/">` tag from `index.html` as it is not required.
+* Turn HTML5 mode off in the AngularJS app. Generally this can be done by:
+	* In `index.html` change `<script src="dist/js/app.min.js"></script>` line to `<script src="dist/js/app.js"></script>`.
+	* In `dist/js/app.js`, update the root configuration to remove HTML5 mode: `$locationProvider.html5Mode(false);`.
+
+This will get the app correctly running in the Electron environment.
+
+## Menus
+
+We have added two menus, File and Dev, and removed the default menu items. These are defined in
+
+* `menu/file-menu-template.js`
+* `menu/dev-menu-template.js`
+
+These can be edited as needed to provide additional functionality.
+
+#### File menu
+
+* `Kiosk Mode` - (alt+cmd+K) makes the app Full Screen. Full Screen can then be turned off by pressing `esc` or just quitting the app via the shortcut.
+* `Quit` - (cmd+Q) Quits the app, obviously.
+
+#### Dev menu
+
+* `Reload` - (cmd+R) Reloads the app.
+* `Toggle DevTools` - (alt+cmd+I) Toggle's Chrome's DevTools. Great for debugging.
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT @ [TricomB2B](http://tricomb2b.com)

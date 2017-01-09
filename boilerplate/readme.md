@@ -1,4 +1,4 @@
-# app [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+# app
 
 > My superb app
 
@@ -6,7 +6,7 @@
 ## Dev
 
 ```
-$ npm install
+$ yarn
 ```
 
 ### Run
@@ -26,4 +26,4 @@ Builds the app for macOS, Linux, and Windows, using [electron-packager](https://
 
 ## License
 
-MIT © [<%= name %>](<%= website %>)
+MIT © [TricomB2B](http://tricomb2b.com)
