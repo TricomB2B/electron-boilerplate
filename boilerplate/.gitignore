@@ -1,2 +1,4 @@
 node_modules
 /dist
+# don't necessarily want to include this
+yarn.lock
