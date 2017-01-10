@@ -66,8 +66,10 @@ function createMainWindow() {
  * Get out of fullscreen mode
  */
 function disableFullScreen () {
-	if (mainWindow.isFullScreen())
+	if (mainWindow.isFullScreen()) {
 		mainWindow.setFullScreen(false);
+		mainWindow.setMenuBarVisibility(true);
+	}
 }
 
 /**

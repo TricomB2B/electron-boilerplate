@@ -10,6 +10,7 @@ const fileMenuTemplate = {
 			accelerator: 'Alt+CmdOrCtrl+K',
 			click: () => {
 				BrowserWindow.getFocusedWindow().setFullScreen(true);
+				BrowserWindow.getFocusedWindow().setMenuBarVisibility(false);
 			}
 		}, {
 	    label: 'Quit',
