@@ -1,11 +1,19 @@
 'use strict';
 
-const app = require('electron').app;
+const app           = require('electron').app;
+const BrowserWindow = require('electron').BrowserWindow;
 
 const fileMenuTemplate = {
-	label: 'File',
+	label: app.getName(),
 	submenu: [
-		{ role: 'togglefullscreen' },
+		{
+			label: 'Kiosk Mode',
+			accelerator: 'Alt+CmdOrCtrl+K',
+			click: () => {
+				BrowserWindow.getFocusedWindow().setFullScreen(true);
+				BrowserWindow.getFocusedWindow().setMenuBarVisibility(false);
+			}
+		},
 		{ type: 'separator' },
 		{ role: 'resetzoom' },
 		{ role: 'zoomin' },
